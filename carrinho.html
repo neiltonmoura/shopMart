@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+
+    <title>Carrinho - Shop Mart</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <h1 class="fs-4 mb-0"><a class="text-decoration-none text-white me-3" href="./index.html">Shop Mart </a>
+                </h1>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contato.html">Contato</a>
+                        </li>
+
+                    </ul>
+                    <button class="btn btn-primary"><a href="./carrinho.html"
+                            class="text-white text-decoration-none">Carrinho <span
+                                class="badge bg-danger">2</span></a></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+
+        <script>
+
+        </script>
+
+
+
+
+        <!--depois apagar-->
+
+        <section class="bg-primary py-5 text-center text-white">
+            <div>
+                <h2 class="display-5">Seu carrinho</h2>
+                <p class="lead">Revise seus itens antes de finalizar a compra </p>
+
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <div class="row">
+                <div class="table-responsive col-lg-8">
+                    <table class="table align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Produtos</th>
+                                <th style="width: 130px" class="text-center">Qtde.</th>
+                                <th class="text-center">Preço</th>
+                                <th class="text-center">Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fone de ouvido bluetooth</td>
+                                <td class="text-center">
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="decrement(this)">-</button>
+                                        <input type="number" class="form-control text-center" value="1" min="1"
+                                            onchange="updateTotal(this)">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="increment(this)">+</button>
+                                    </div>
+                                </td>
+                                <td class="unit-price text-center">R$ 49,99</td>
+                                <td class="total-price text-center">R$ 49,99</td>
+                                <td>
+                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bateria 9V</td>
+                                <td class="text-center">
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="decrement(this)">-</button>
+                                        <input type="number" class="form-control text-center" value="1" min="1"
+                                            onchange="updateTotal(this)">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="increment(this)">+</button>
+                                    </div>
+                                </td>
+                                <td class="unit-price text-center">R$ 18,56</td>
+                                <td class="total-price text-center">R$ 18,56</td>
+                                <td>
+                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cabo USB/Tipo C</td>
+                                <td class="text-center">
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="decrement(this)">-</button>
+                                        <input type="number" class="form-control text-center" value="1" min="1"
+                                            onchange="updateTotal(this)">
+                                        <button class="btn btn-outline-secondary py-0"
+                                            onclick="increment(this)">+</button>
+                                    </div>
+                                </td>
+                                <td class="unit-price text-center">R$ 9,90</td>
+                                <td class="total-price text-center">R$ 9,90</td>
+                                <td>
+                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title h5 text-center">Resumo</h2>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    Subtotal<span class="fw-bold">R$ 89,79</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between">
+                                    Frete<span class="fw-bold">R$ 15,95</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between fw-bold">
+                                    Total<span>R$ 101,95</span>
+                                </li>
+
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <div class="bg-dark d-flex justify-content-center">
+
+            <footer class="container row py-0 mt-4">
+                <div class="col-12 col-lg-3 mb-3">
+                    <h3 class="text-white">Shop Mart</h3>
+                    <p class="text-white">© 2025</p>
+                </div>
+
+                <div class=" col-12 col-lg-3 mb-4">
+                    <h4 class="text-white ">Menu alternativo</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-white">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="./produtos.html" class="nav-link p-0 text-white">Produtos</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="./contato.html" class="nav-link p-0 text-white">Contato</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 mb-4">
+                    <h4 class="text-white ">Redes sociais</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                                class="nav-link p-0 text-white">
+                                Instagram <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"
+                                class="nav-link p-0 text-white">
+                                Facebook <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"
+                                class="nav-link p-0 text-white">
+                                X <i class="bi-twitter-x"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://br.linkedin.com/?mcid=6821526239111716925&src=go-pa&trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw
+                                .linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9196657&cid=&gclsrc=aw.ds&gad_source=1&gad_campaignid=12619604099&gbraid=0AAAAABhL5JO
+                                PP3EhIyIoGcEnPZrb5-MWW&gclid=EAIaIQobChMIoIfZx8HgjgMVh2dIAB3B4hC9EAAYASAAEgI_8vD_BwE"
+                                target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-white">
+                                Linkedin <span class="bi-linkedin"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h4 class="text-white ">Contato</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">(11) 96715-7619 <i
+                                    class="bi bi-telephone"></i></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">WhatsApp <i
+                                    class="bi bi-whatsapp"></i></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">suporte@shopmart.com.br <i
+                                    class="bi bi-envelope-at"></i></a></li>
+
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <script>
+            function increment(button) {
+                const input = button.parentElement.querySelector('input');
+                input.value = parseInt(input.value) + 1;
+            }
+
+            function decrement(button) {
+                const input = button.parentElement.querySelector('input');
+                const min = parseInt(input.min) || 1;
+                const value = parseInt(input.value);
+                if (value > min) {
+                    input.value = value - 1;
+                }
+            }
+        </script>
+
+        <script>
+            function formatToBRL(number) {
+                return number.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            }
+
+            function parseBRL(value) {
+                return parseFloat(value.replace('R$', '').replace('.', '').replace(',', '.'));
+            }
+
+            function updateTotal(input) {
+                const row = input.closest('tr');
+                const quantity = parseInt(input.value) || 1;
+                const unitPriceText = row.querySelector('.unit-price').textContent;
+                const unitPrice = parseBRL(unitPriceText);
+                const total = quantity * unitPrice;
+                row.querySelector('.total-price').textContent = formatToBRL(total);
+            }
+
+            function increment(button) {
+                const input = button.parentElement.querySelector('input');
+                input.value = parseInt(input.value) + 1;
+                updateTotal(input);
+            }
+
+            function decrement(button) {
+                const input = button.parentElement.querySelector('input');
+                const min = parseInt(input.min) || 1;
+                const value = parseInt(input.value);
+                if (value > min) {
+                    input.value = value - 1;
+                    updateTotal(input);
+                }
+            }
+        </script>
+    </body>
+
+</html>
